@@ -12,8 +12,8 @@ ev3 = EV3Brick()
 
 
 # Initialize the motors.
-left_motor = Motor(Port.B)
-right_motor = Motor(Port.C)
+left_motor = Motor(Port.A)
+right_motor = Motor(Port.B)
 
 # Initialize the color sensor.
 line_sensor = ColorSensor(Port.S1)
