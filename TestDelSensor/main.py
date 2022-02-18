@@ -22,11 +22,11 @@ robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
 #Color identification loop.
 while True:
-    #robot.drive(200, 0)
-    color_recognition = front_line_sensor.color()
+    color_recognition = front_line_sensor.rgb()
     ev3.screen.print(color_recognition)
 
-    if front_line_sensor.color() == Color.BLACK:
-        ev3.speaker.beep()
-        robot.straight(-100)
+    #if front_line_sensor.color() == Color.BLACK:
+      #  ev3.speaker.beep()
+      #  robot.straight(-10)
+      #  robot.turn
 
