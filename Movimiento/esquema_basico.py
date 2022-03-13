@@ -33,8 +33,5 @@ fcolor_sensor_in1 = ColorSensor(Port.S1)
 
 #MovementStraigt
 robot.straight(1000)
-
 robot.turn(360)
-
-
 robot.turn(-360)
