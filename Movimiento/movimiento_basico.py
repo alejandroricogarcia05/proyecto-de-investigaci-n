@@ -20,22 +20,44 @@ from pybricks.robotics import DriveBase
 ev3 = EV3Brick()
 
 # Initialize the motors.
-left_motor = Motor(Port.B)
-right_motor = Motor(Port.C)
+left_motor = Motor(Port.A)
+right_motor = Motor(Port.B)
+
+def MoveAndRotate(Distance,Degrees):
+    robot.straight(Distance)
+
+    ev3.speaker.beep()
+
+    robot.straight(-Distance)
+    ev3.speaker.beep()
+
+    # Turn clockwise by 360 degrees and back again.
+    robot.turn(Degrees)
+    ev3.speaker.beep()
+
+    robot.turn(-Degrees)
+    ev3.speaker.beep()
+
+
+def f(x):
+    resultado = 2 * x - 4
+    print(resultado)
+
+f(2) # 0
+f(3) # 2
+f(4) # 4
+
+def g(x):
+    resultado = 2 / x
+
+f(0) # Daría error de división de cero
+
 
 # Initialize the drive base.
 robot = DriveBase(left_motor, right_motor, wheel_diameter=55.5, axle_track=104)
 
-# Go forward and backwards for one meter.
-robot.straight(1000)
-ev3.speaker.beep()
+MoveAndRotate(1000,360)
+MoveAndRotate(100,90)
+MoveAndRotate(2000,45)
 
-robot.straight(-1000)
-ev3.speaker.beep()
 
-# Turn clockwise by 360 degrees and back again.
-robot.turn(360)
-ev3.speaker.beep()
-
-robot.turn(-360)
-ev3.speaker.beep()
