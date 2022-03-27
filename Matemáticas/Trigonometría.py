@@ -1,5 +1,5 @@
 from sympy import *
-from math import *
+from math import radians, degrees
 
 a = symbols('a') # Cateto contiguo
 
