@@ -34,18 +34,4 @@ print(expand_trig(tan(2*x))) # 2*tan(x)/(1 - tan(x)**2)
  
 print("\n")
 
-#Razones del ángulo mitad
-print(expand_trig(sin(x/2)))
-print(expand_trig(cos(x/2)))
-print(expand_trig(tan(x/2)))
-
-print("\n")
-
-#Suma y diferencia de senos y cosenos
-print(expand_trig(sin(x)+sin(y)))
-print(expand_trig(sin(x)-sin(y)))
-print(expand_trig(cos(x)+cos(y)))
-print(expand_trig(sin(x)-cos(y)))
-
-
 
