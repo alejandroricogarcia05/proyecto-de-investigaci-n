@@ -15,5 +15,8 @@ g = 2/x
 
 print(continuous_domain(g,x,S.Reals)) #Union(Interval.open(-oo, 0), Interval.open(0, oo))
 
-p1 = plot(f) 
-p2 = plot(g)
+print(g.subs(x,0)) #Devuelve zoo que implica la división de cero. No para el programa.
+
+#Les damos limites en los ejes x e y para que la gráfica se vea mejor.
+p1 = plot(f,xlim=[-5,5],ylim=[-5,5]) 
+p2 = plot(g,xlim=[-10,10],ylim=[-10,10])
